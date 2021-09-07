@@ -45,3 +45,4 @@ Option Name | Type | Description | Default Value | Required
 `smartphoneNumColumns`| number | he number of columns to be displayed as div with the background fixed image on a smartphone screen | 15 | No
 `fixedHeight`| number | If provided, the slider will ignore it's parent height and will use this value in pixels insted | null | No
 `fixedWidth`| number | If provided, the slider will ignore it's parent width and will use this value in pixels insted | null | No
+`speed`| number | The speed of the looped animation in seconds | 3 | No
