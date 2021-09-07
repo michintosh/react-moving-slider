@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# React Moving Slider
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ A simple **React** component to display your images using CSS animations and transitions.
+ 
+ It supports click events for sliding and moving through an array of images.
 
-## Available Scripts
+Demo here
 
-In the project directory, you can run:
+![React Moving Slider Example](https://i.ibb.co/py78b0b/react-moving-slider.gif)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+run `npm install react-moving-slider` and then, in your component `import MovingSlider from 'react-moving-slider'`
 
-### `npm test`
+# Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The basic setup for a slider is
+```
+import React from "react"
+import MovingSlider from 'react-moving-slider'
 
-### `npm run build`
+function App() {
+  return (
+    <MovingSlider
+        images={[
+            "https://picsum.photos/1200/1500?random=1",
+            "https://picsum.photos/1200/1500?random=2",
+            "https://picsum.photos/1200/1500?random=3",
+        ]}
+    />
+  )
+}
+```
+You can of course change the array values to be your images URLs
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Options
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Option Name | Type | Description | Default Value | Required
+------------ | ------------- | ------------- | ------------- | ------------- 
+`minHeight` | *number* | the minimal height that one column can reach (in percentage and relative to the parent container) | 20 | No
+`maxHeight` | *number* | the maximal height that one column can reach (in percentage and relative to the parent container)| 100 | No
+`images`| *Array* | the array of images to be passed as "background-image" value, if more than 1 is provided, the `handleSlide` method will handle the transition between images on click | [] | Yes
+`numColumns`| number | the number of columns to be displayed as div with the background fixed image | 30 | No
+`smartphoneNumColumns`| number | he number of columns to be displayed as div with the background fixed image on a smartphone screen | 15 | No
+`fixedHeight`| number | If provided, the slider will ignore it's parent height and will use this value in pixels insted | null | No
+`fixedWidth`| number | If provided, the slider will ignore it's parent width and will use this value in pixels insted | null | No
