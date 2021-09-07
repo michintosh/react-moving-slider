@@ -57,11 +57,11 @@ function MovingSlider({
         height: fixedHeight != undefined ? `${fixedHeight}px` : "100%",
         width: fixedWidth != undefined ? `${fixedWidth}px` : "100%",
       }}
-      onClick={images.length > 1 ? handleSlide : () => {}}
-    >
+      >
       {[...Array(windows).keys()].map((key, idx) => {
         return (
           <div
+          onClick={images.length > 1 ? handleSlide : () => {}}
             key={idx}
             className={`movingslider ${close ? "__close" : ""}`}
             style={{
