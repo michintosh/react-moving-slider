@@ -60,7 +60,9 @@ function MovingSlider({
       key: idx,
       className: `movingslider ${close ? "__close" : ""}`,
       style: {
-        height: `${Math.floor(Math.random() * (100 - minHeight)) + minHeight}%`,
+        height: `${Math.floor(Math.random() * (maxHeight - minHeight)) + minHeight}%`,
+        maxHeight: `${maxHeight}%`,
+        minHeight: `${minHeight}%`,
         backgroundImage: `url(${images[img]})`,
         animation: `mover ${speed}s infinite cubic-bezier(0.41, 0.01, 0.69, 0.99) alternate`,
         animationDelay: `-${Math.floor(Math.random() * 10) + 1}s`

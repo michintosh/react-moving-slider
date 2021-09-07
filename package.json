@@ -1,6 +1,6 @@
 {
   "name": "react-moving-slider",
-  "version": "0.1.4",
+  "version": "0.1.45",
   "description": "A simple React component for a different slider visualization",
   "main": "MovingSlider.js",
   "private": false,
@@ -11,8 +11,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "publish:npm": "rm -rf public && mkdir public &&  babel src/Components -d ./ --copy-files",
-    "publish:locally": "rm -rf public && mkdir public &&  babel src/Components -d ./ --copy-files && npm pack",
+    "publish:npm": "rm -rf public &&  babel src/Components -d ./ --copy-files",
+    "publish:locally": "rm -rf public &&  babel src/Components -d ./ --copy-files && npm pack",
     "eject": "react-scripts eject"
   },
   "babel": {
