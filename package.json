@@ -1,21 +1,23 @@
 {
-  "name": "react-moving-slider-v2",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-moving-slider",
+  "version": "0.1.1",
+  "description": "A simple React component for a different slider visualization",
+  "main": "MovingSlider.js",
+  "private": false,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "react": "^17.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "publish:npm": "rm -rf public && mkdir public &&  babel src/Components -d ./ --copy-files",
     "eject": "react-scripts eject"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +36,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+
+  "devDependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/preset-react": "^7.14.5"
+  },
+  "keywords": [
+    "react",
+    "moving-slider",
+    "slider",
+    "dynamic"
+  ],
+  "author": "Michelangelo Alesi",
+  "license": "ISC"
 }
