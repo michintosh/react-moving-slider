@@ -1,6 +1,6 @@
 # React Moving Slider
 
- A simple **React** component to display your images using CSS animations and transitions.
+ A simple **React** component that displays your images using CSS animations and transitions.
  
  It supports click events for sliding and moving through an array of images.
 

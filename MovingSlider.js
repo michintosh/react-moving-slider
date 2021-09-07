@@ -73,7 +73,7 @@ MovingSlider.propTypes = {
   minHeight: PropTypes.number,
   maxHeight: PropTypes.number,
   numColumns: PropTypes.number,
-  images: PropTypes.array,
+  images: PropTypes.array.isRequired,
   smartphoneNumColumns: PropTypes.number,
   fixedHeight: PropTypes.number,
   fixedWidth: PropTypes.number,
