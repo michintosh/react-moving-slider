@@ -4,7 +4,7 @@
  
  It supports click events for sliding and moving through an array of images.
 
-Demo here
+[Demo here](https://michelangeloalesi.it/react-moving-slider)
 
 ![React Moving Slider Example](https://i.ibb.co/py78b0b/react-moving-slider.gif)
 
@@ -42,7 +42,7 @@ Option Name | Type | Description | Default Value | Required
 `maxHeight` | *number* | the maximal height that one column can reach (in percentage and relative to the parent container)| 100 | No
 `images`| *Array* | the array of images to be passed as "background-image" value, if more than 1 is provided, the `handleSlide` method will handle the transition between images on click | [] | Yes
 `numColumns`| number | the number of columns to be displayed as div with the background fixed image | 30 | No
-`smartphoneNumColumns`| number | he number of columns to be displayed as div with the background fixed image on a smartphone screen | 15 | No
+`smartphoneNumColumns`| number | the number of columns to be displayed as div with the background fixed image on a smartphone screen | 15 | No
 `fixedHeight`| number | If provided, the slider will ignore it's parent height and will use this value in pixels insted | null | No
 `fixedWidth`| number | If provided, the slider will ignore it's parent width and will use this value in pixels insted | null | No
 `speed`| number | The speed of the looped animation in seconds | 3 | No
