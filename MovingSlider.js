@@ -12,9 +12,10 @@ function MovingSlider({
   fixedWidth,
   speed = 3
 }) {
+  const isBrowser = typeof window !== "undefined";
   const isSmartphone = 768;
   const [close, setClose] = useState(false);
-  const [windows, setWindows] = useState(window?.innerWidth < isSmartphone ? smartphoneNumColumns : numColumns);
+  const [windows, setWindows] = useState(isBrowser ? window.innerWidth < isSmartphone ? smartphoneNumColumns : numColumns : numColumns);
   const [img, setImg] = useState(0);
   const [title, setTitle] = useState(0);
 
@@ -38,15 +39,17 @@ function MovingSlider({
   };
 
   useEffect(() => {
-    window.addEventListener("resize", function () {
-      if (window.innerWidth < isSmartphone) {
-        setWindows(smartphoneNumColumns);
-      }
+    if (isBrowser) {
+      window.addEventListener("resize", function () {
+        if (window.innerWidth < isSmartphone) {
+          setWindows(smartphoneNumColumns);
+        }
 
-      if (window.innerWidth > isSmartphone && windows != numColumns) {
-        setWindows(numColumns);
-      }
-    });
+        if (window.innerWidth > isSmartphone && windows != numColumns) {
+          setWindows(numColumns);
+        }
+      });
+    }
   }, []);
   return /*#__PURE__*/React.createElement("div", {
     className: "movingslider-container",
