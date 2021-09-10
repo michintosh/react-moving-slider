@@ -11,8 +11,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "publish:npm": "rm -rf public &&  babel src/Components -d ./ --copy-files && npm publish",
-    "publish:locally": "rm -rf public &&  babel src/Components -d ./ --copy-files && npm pack",
+    "publish:npm": "babel src/Components -d ./ --copy-files && npm publish",
+    "publish:locally": "babel src/Components -d ./ --copy-files && npm pack",
     "eject": "react-scripts eject"
   },
   "babel": {
